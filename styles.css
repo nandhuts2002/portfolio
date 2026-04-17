@@ -132,6 +132,20 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 4px 20px rgba(79,142,255,0.4);
 }
 
+.nav-links .nav-resume {
+  border: 1.5px solid rgba(79,142,255,0.35);
+  color: var(--accent) !important;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.nav-links .nav-resume:hover {
+  background: rgba(79,142,255,0.1);
+  border-color: var(--accent);
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -359,6 +373,19 @@ img { max-width: 100%; display: block; }
   border-color: var(--accent);
   color: var(--accent);
   background: rgba(79,142,255,0.07);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  color: var(--text2);
+  background: transparent;
+  border: 1.5px solid transparent;
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+  border-color: var(--border);
+  background: var(--surface);
   transform: translateY(-2px);
 }
 

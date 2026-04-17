@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Nandhu T S</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary:  #1a73e8;
+      --dark:     #111827;
+      --muted:    #4b5563;
+      --light:    #6b7280;
+      --border:   #e5e7eb;
+      --accent:   #1a73e8;
+      --bg:       #f9fafb;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ---- Toolbar (hidden on print) ---- */
+    .toolbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #1e293b;
+      padding: 12px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 100;
+      gap: 16px;
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .toolbar a.back {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .toolbar a.back:hover { color: #fff; }
+
+    .toolbar-title {
+      color: #f1f5f9;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .toolbar-actions { display: flex; gap: 10px; }
+
+    .btn-print {
+      background: linear-gradient(135deg, #1a73e8, #7c3aed);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn-print:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ---- Resume Paper ---- */
+    .page-wrap {
+      padding: 80px 0 48px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .resume {
+      background: #fff;
+      width: 860px;
+      max-width: 100%;
+      padding: 52px 56px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    /* ---- Header ---- */
+    .r-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+    }
+
+    .r-name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--dark);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .r-title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--primary);
+      margin: 4px 0 14px;
+    }
+
+    .r-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .r-contacts span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .r-contacts a { color: var(--primary); text-decoration: none; }
+
+    /* ---- Section ---- */
+    .r-section { margin-bottom: 22px; }
+
+    .r-section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 5px;
+      margin-bottom: 12px;
+    }
+
+    .r-summary {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ---- Experience / Sub-items ---- */
+    .r-item { margin-bottom: 14px; }
+
+    .r-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+
+    .r-item-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .r-item-org {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .r-item-date {
+      font-size: 0.78rem;
+      color: var(--light);
+      font-family: 'JetBrains Mono', monospace;
+      white-space: nowrap;
+    }
+
+    .r-item-cgpa {
+      font-size: 0.82rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .r-bullets { list-style: none; padding: 0; }
+    .r-bullets li {
+      font-size: 0.83rem;
+      color: var(--muted);
+      padding: 2px 0 2px 14px;
+      position: relative;
+      line-height: 1.6;
+    }
+    .r-bullets li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* ---- Projects ---- */
+    .r-project { margin-bottom: 12px; }
+
+    .r-project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .r-project-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .r-project-tech {
+      font-size: 0.75rem;
+      color: var(--primary);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ---- Skills ---- */
+    .r-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px 32px;
+    }
+
+    .r-skill-row {
+      display: flex;
+      gap: 6px;
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    .r-skill-label {
+      font-weight: 600;
+      color: var(--dark);
+      min-width: 110px;
+      flex-shrink: 0;
+    }
+
+    .r-skill-val { color: var(--muted); }
+
+    /* ---- Certs ---- */
+    .r-cert { font-size: 0.82rem; color: var(--muted); margin-bottom: 6px; line-height: 1.6; padding-left: 14px; position: relative; }
+    .r-cert::before { content: '•'; position: absolute; left: 0; color: var(--primary); font-weight: 700; }
+    .r-cert strong { color: var(--dark); }
+
+    /* ---- Strengths ---- */
+    .r-strengths {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .r-strengths span::before { content: '• '; color: var(--primary); font-weight: 700; }
+
+    /* ======= PRINT STYLES ======= */
+    @media print {
+      .toolbar { display: none !important; }
+      .page-wrap { padding: 0; }
+      body { background: #fff; }
+      .resume {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 36px 44px;
+        width: 100%;
+        font-size: 12.5px;
+      }
+      @page { margin: 10mm 14mm; size: A4; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <a class="back" href="index.html">
+        ← Back to Portfolio
+      </a>
+      <span class="toolbar-title">Nandhu T S — Resume</span>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn-print" onclick="window.print()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Download / Print PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- Resume Paper -->
+  <div class="page-wrap">
+    <div class="resume">
+
+      <!-- Header -->
+      <div class="r-header">
+        <div class="r-name">Nandhu T S</div>
+        <div class="r-title">Full Stack Developer &amp; ML Enthusiast</div>
+        <div class="r-contacts">
+          <span>✉ <a href="mailto:nandhunandhuts@gmail.com">nandhunandhuts@gmail.com</a></span>
+          <span>📞 +91 7306276438</span>
+          <span>🔗 <a href="https://www.linkedin.com/in/nandhu-t-s" target="_blank">LinkedIn</a></span>
+          <span>🌐 <a href="https://nandhuts2002.github.io/portfolio/" target="_blank">Portfolio</a></span>
+          <span>📍 Kottayam, Kerala, India</span>
+        </div>
+      </div>
+
+      <!-- Professional Summary -->
+      <div class="r-section">
+        <div class="r-section-title">Professional Summary</div>
+        <p class="r-summary">
+          MCA student and Full Stack Developer with strong foundations in backend development, RESTful API design, and database-driven systems.
+          Proficient in Java, Python, and PHP with hands-on experience in MVC architecture, OOP, and SDLC. Experienced in building end-to-end
+          web applications using React on the frontend and Flask/Django on the backend. Knowledgeable in Machine Learning (Decision Trees, SVM,
+          KNN) and computer vision with MoveNet. Passionate about building scalable, secure, and maintainable full stack applications.
+        </p>
+      </div>
+
+      <!-- Internship -->
+      <div class="r-section">
+        <div class="r-section-title">Internship Experience</div>
+        <div class="r-item">
+          <div class="r-item-header">
+            <div>
+              <div class="r-item-title">Cyber Security Intern</div>
+              <div class="r-item-org">Wahy Lab Solutions, Ernakulam</div>
+            </div>
+          </div>
+          <ul class="r-bullets">
+            <li>Conducted vulnerability assessments on web applications, identifying and documenting critical security flaws.</li>
+            <li>Assisted in firewall configuration testing and network traffic analysis using industry tools.</li>
+            <li>Prepared detailed security audit reports and remediation documentation for client review.</li>
+            <li>Gained hands-on exposure to penetration testing methodologies and OWASP Top 10 vulnerabilities.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="r-section">
+        <div class="r-section-title">Projects</div>
+
+        <div class="r-project">
+          <div class="r-project-header">
+            <span class="r-project-name">FitHub – Integrated Fitness Platform</span>
+            <span class="r-project-tech">Python · React · MongoDB · MoveNet · Flask · TensorFlow.js · KNN</span>
+          </div>
+          <ul class="r-bullets">
+            <li>Developed RESTful APIs for authentication, fitness tracking, and workout management using Flask.</li>
+            <li>Built dynamic React frontend with component-based architecture integrating all backend APIs.</li>
+            <li>Implemented Real-Time Posture Correction System using MoveNet (TensorFlow.js) for live skeleton tracking and joint angle analysis — provides instant audio-visual feedback to correct exercise posture.</li>
+            <li>Designed personalized workout recommendation engine using KNN-based user profiling.</li>
+            <li>Performed comprehensive API testing via Postman and ensured database integrity with MongoDB.</li>
+          </ul>
+        </div>
+
+        <div class="r-project">
+          <div class="r-project-header">
+            <span class="r-project-name">Bus Ticket Booking System</span>
+            <span class="r-project-tech">PHP · MySQL · HTML/CSS/JS</span>
+          </div>
+          <ul class="r-bullets">
+            <li>Built full stack booking platform: dynamic seat selection UI, backend booking workflow, and payment validation.</li>
+            <li>Optimized complex SQL queries for seat availability and transaction handling; conducted functional testing.</li>
+          </ul>
+        </div>
+
+        <div class="r-project">
+          <div class="r-project-header">
+            <span class="r-project-name">Train Ticket &amp; Food Booking Application</span>
+            <span class="r-project-tech">Python · SQLite · Flask</span>
+          </div>
+          <ul class="r-bullets">
+            <li>Developed full stack booking app with live train tracking, seat reservation, and in-journey food ordering.</li>
+            <li>Implemented data persistence with SQLite and covered end-to-end user flows with manual testing.</li>
+          </ul>
+        </div>
+
+        <div class="r-project">
+          <div class="r-project-header">
+            <span class="r-project-name">Library Management System</span>
+            <span class="r-project-tech">PHP · MySQL</span>
+          </div>
+          <ul class="r-bullets">
+            <li>Implemented complete CRUD operations, JWT-style session authentication, and role-based access control.</li>
+          </ul>
+        </div>
+
+        <div class="r-project">
+          <div class="r-project-header">
+            <span class="r-project-name">Fall Detection System for Elders</span>
+            <span class="r-project-tech">IoT · Python · OpenCV</span>
+          </div>
+          <ul class="r-bullets">
+            <li>Designed real-time fall detection pipeline using sensor fusion and Python-based alert notification system.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="r-section">
+        <div class="r-section-title">Education</div>
+        <div class="r-item">
+          <div class="r-item-header">
+            <div>
+              <div class="r-item-title">Master of Computer Applications (MCA)</div>
+              <div class="r-item-org">Amal Jyothi College of Engineering (Autonomous)</div>
+            </div>
+            <div style="text-align:right">
+              <div class="r-item-date">2024 – 2026</div>
+              <div class="r-item-cgpa">CGPA: 8.14 / 10</div>
+            </div>
+          </div>
+        </div>
+        <div class="r-item">
+          <div class="r-item-header">
+            <div>
+              <div class="r-item-title">Bachelor of Computer Applications (BCA)</div>
+              <div class="r-item-org">St. George's College, Aruvithura</div>
+            </div>
+            <div style="text-align:right">
+              <div class="r-item-date">2020 – 2023</div>
+              <div class="r-item-cgpa">CGPA: 6.04 / 10</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Skills -->
+      <div class="r-section">
+        <div class="r-section-title">Technical Skills</div>
+        <div class="r-skills-grid">
+          <div class="r-skill-row"><span class="r-skill-label">Languages:</span><span class="r-skill-val">Python, Java, PHP, JavaScript, SQL, C</span></div>
+          <div class="r-skill-row"><span class="r-skill-label">Frameworks:</span><span class="r-skill-val">React, Flask, Django, Spring Boot, TensorFlow.js</span></div>
+          <div class="r-skill-row"><span class="r-skill-label">Databases:</span><span class="r-skill-val">MongoDB, MySQL, SQLite, PostgreSQL</span></div>
+          <div class="r-skill-row"><span class="r-skill-label">ML / AI:</span><span class="r-skill-val">Decision Trees, SVM, KNN, MoveNet, Scikit-learn, OpenCV</span></div>
+          <div class="r-skill-row"><span class="r-skill-label">Concepts:</span><span class="r-skill-val">REST APIs, MVC, OOP, SDLC, JWT Auth, RBAC</span></div>
+          <div class="r-skill-row"><span class="r-skill-label">Security:</span><span class="r-skill-val">OWASP Top 10, NMAP, Pen Testing, Firewall Config</span></div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="r-section">
+        <div class="r-section-title">Certifications, Workshops &amp; Achievements</div>
+        <div class="r-cert"><strong>NPTEL Certifications:</strong> Cloud Computing · Internet of Things · Human Computer Interaction</div>
+        <div class="r-cert"><strong>Wikimedia Workshop:</strong> Led a group project to build a movie website dynamically fetching film data via the Wikidata API; covered SPARQL querying, data parsing, and open knowledge contribution.</div>
+        <div class="r-cert"><strong>Cybersecurity Workshop:</strong> Hands-on training with NMAP for network scanning and vulnerability detection — host discovery, port scanning techniques, and interpreting scan results.</div>
+        <div class="r-cert"><strong>ML Workshop (Google Colab):</strong> Trained supervised models (Decision Trees, SVM, KNN) on real datasets; covered data preprocessing, feature engineering, model evaluation using Scikit-learn and Matplotlib.</div>
+        <div class="r-cert"><strong>NASA Space Apps Hackathon:</strong> Participant — developed a prototype solution addressing a NASA open-data challenge within a 48-hour sprint.</div>
+        <div class="r-cert"><strong>Certificate of Merit:</strong> Principal's Honours Award 2024–25 for academic excellence and outstanding contributions.</div>
+      </div>
+
+      <!-- Strengths -->
+      <div class="r-section">
+        <div class="r-section-title">Core Strengths</div>
+        <div class="r-strengths">
+          <span>Problem Solving</span>
+          <span>Full Stack Thinking</span>
+          <span>Team Collaboration</span>
+          <span>Adaptability</span>
+          <span>Continuous Learning</span>
+        </div>
+      </div>
+
+    </div><!-- /resume -->
+  </div><!-- /page-wrap -->
+
+</body>
+</html>
