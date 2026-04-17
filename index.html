@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandhu T S — Full Stack Developer & ML Enthusiast</title>
+  <meta name="description" content="Portfolio of Nandhu T S — Full Stack Developer and ML Enthusiast specializing in Flask, React, Python, Java and Machine Learning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Particle Canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a class="nav-logo" href="#hero">NTS<span class="logo-dot">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Achievements</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name">
+        <span class="line1">Nandhu</span>
+        <span class="line2">T S<span class="cursor-blink">_</span></span>
+      </h1>
+      <p class="hero-title">Full Stack Developer <span class="amp">&amp;</span> ML Enthusiast</p>
+      <p class="hero-desc">
+        Building scalable, secure, and intelligent web applications — from RESTful APIs to real-time ML pipelines.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-val">6+</span><span class="stat-label">Projects</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-val">8.14</span><span class="stat-label">CGPA (MCA)</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-val">3+</span><span class="stat-label">NPTEL Certs</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 / About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-avatar-wrap">
+          <div class="about-avatar">
+            <div class="avatar-initials">NTS</div>
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring ring2"></div>
+          </div>
+          <div class="about-chips">
+            <span class="chip">Flask &amp; Django</span>
+            <span class="chip">React</span>
+            <span class="chip">ML / CV</span>
+            <span class="chip">Java &amp; Python</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>
+            I'm an <strong>MCA student</strong> at Amal Jyothi College of Engineering (CGPA 8.14) with a passion for building end-to-end web applications. My expertise spans backend architecture, RESTful API design, and database-driven systems using <strong>Python, Java, and PHP</strong>.
+          </p>
+          <p>
+            On the frontend, I craft dynamic user experiences with <strong>React</strong> and component-based architecture. I'm deeply interested in <strong>Machine Learning</strong> — having applied Decision Trees, SVM, KNN, and computer vision with MoveNet in real-world projects.
+          </p>
+          <p>
+            I believe in building software that is not just functional, but <strong>scalable, secure, and maintainable</strong>.
+          </p>
+          <div class="about-links">
+            <a href="mailto:nandhunandhuts@gmail.com" class="about-link" id="emailLink">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
+              nandhunandhuts@gmail.com
+            </a>
+            <a href="tel:+917306276438" class="about-link" id="phoneLink">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.66A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006.36 6.36l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +91 7306276438
+            </a>
+            <a href="https://www.linkedin.com/in/nandhu-t-s" target="_blank" rel="noopener noreferrer" class="about-link" id="linkedinLink">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <span class="about-link no-hover">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kottayam, Kerala, India
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 / Skills</span>
+        <h2 class="section-title">Technical Arsenal</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9l3 3-3 3M13 15h3"/></svg>
+          </div>
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>Java</span><span>PHP</span><span>JavaScript</span><span>SQL</span><span>C</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Frameworks</h3>
+          <div class="skill-tags">
+            <span>React</span><span>Flask</span><span>Django</span><span>Spring Boot</span><span>TensorFlow.js</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3>Databases</h3>
+          <div class="skill-tags">
+            <span>MongoDB</span><span>MySQL</span><span>SQLite</span><span>PostgreSQL</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3>Concepts</h3>
+          <div class="skill-tags">
+            <span>REST APIs</span><span>MVC</span><span>OOP</span><span>SDLC</span><span>JWT Auth</span><span>RBAC</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.5 2A2.5 2.5 0 0112 4.5v15a2.5 2.5 0 01-4.96.44A2.5 2.5 0 014 17.5a2.5 2.5 0 010-5A2.5 2.5 0 016.5 7h1A2.5 2.5 0 019.5 2zm5 0A2.5 2.5 0 0112 4.5v15a2.5 2.5 0 004.96.44A2.5 2.5 0 0020 17.5a2.5 2.5 0 000-5 2.5 2.5 0 00-2.5-5.5h-1A2.5 2.5 0 0114.5 2z"/></svg>
+          </div>
+          <h3>Machine Learning</h3>
+          <div class="skill-tags">
+            <span>Decision Trees</span><span>SVM</span><span>KNN</span><span>MoveNet</span><span>Scikit-learn</span><span>OpenCV</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Security</h3>
+          <div class="skill-tags">
+            <span>OWASP Top 10</span><span>NMAP</span><span>Pen Testing</span><span>Firewall Config</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 / Projects</span>
+        <h2 class="section-title">What I've Built</h2>
+      </div>
+
+      <!-- Featured Project -->
+      <div class="featured-project reveal">
+        <div class="featured-badge">⭐ Featured Project</div>
+        <div class="featured-grid">
+          <div class="featured-info">
+            <h3 class="project-name">FitHub</h3>
+            <p class="project-subtitle">Integrated Fitness Platform</p>
+            <p class="project-desc">
+              A comprehensive, AI-powered fitness platform with real-time posture correction using MoveNet (TensorFlow.js), 
+              a KNN-based personalized workout recommendation engine, and full authentication + fitness tracking APIs.
+            </p>
+            <ul class="project-highlights">
+              <li>Real-Time Posture Correction via live skeleton tracking &amp; joint angle analysis with instant audio-visual feedback</li>
+              <li>Personalized workout recommendations using KNN-based user profiling</li>
+              <li>RESTful APIs for authentication, fitness tracking &amp; workout management (Flask)</li>
+              <li>Dynamic React frontend with full backend integration</li>
+              <li>MongoDB for data persistence; comprehensive Postman API testing</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag ml">Python</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag ml">MoveNet</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag ml">TensorFlow.js</span>
+              <span class="tech-tag ml">KNN</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://fit-hub-portal-2.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="fithubLiveLink">Live Demo →</a>
+            </div>
+          </div>
+          <div class="featured-mockup">
+            <div class="mockup-window">
+              <div class="mockup-bar">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="mockup-url">fit-hub-portal-2.onrender.com</span>
+              </div>
+              <div class="mockup-screen">
+                <div class="mockup-hero-text">FitHub</div>
+                <div class="mockup-hero-sub">AI Fitness Platform</div>
+                <div class="mockup-cards">
+                  <div class="mc mc-green">Posture AI</div>
+                  <div class="mc mc-blue">Workout Plan</div>
+                  <div class="mc mc-purple">Nutrition</div>
+                </div>
+                <div class="mockup-chart">
+                  <div class="bar" style="height:45%"></div>
+                  <div class="bar" style="height:65%"></div>
+                  <div class="bar" style="height:55%"></div>
+                  <div class="bar active" style="height:80%"></div>
+                  <div class="bar" style="height:70%"></div>
+                  <div class="bar" style="height:90%"></div>
+                  <div class="bar" style="height:75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Projects Grid -->
+      <div class="projects-grid">
+        <div class="project-card reveal" id="busTicketProject">
+          <div class="project-card-header">
+            <div class="project-card-icon">🚌</div>
+            <div class="project-card-tags">
+              <span class="tech-tag small">PHP</span>
+              <span class="tech-tag small">MySQL</span>
+              <span class="tech-tag small">HTML/CSS/JS</span>
+            </div>
+          </div>
+          <h3>Bus Ticket Booking System</h3>
+          <p>Full stack booking platform with dynamic seat selection UI, backend booking workflow, payment validation, and optimized SQL queries for seat availability.</p>
+        </div>
+
+        <div class="project-card reveal" id="trainTicketProject">
+          <div class="project-card-header">
+            <div class="project-card-icon">🚆</div>
+            <div class="project-card-tags">
+              <span class="tech-tag small">Python</span>
+              <span class="tech-tag small">SQLite</span>
+              <span class="tech-tag small">Flask</span>
+            </div>
+          </div>
+          <h3>Train Ticket &amp; Food Booking App</h3>
+          <p>Full stack app with live train tracking, seat reservation, and in-journey food ordering. Includes SQLite data persistence and complete end-to-end user flows.</p>
+        </div>
+
+        <div class="project-card reveal" id="libraryProject">
+          <div class="project-card-header">
+            <div class="project-card-icon">📚</div>
+            <div class="project-card-tags">
+              <span class="tech-tag small">PHP</span>
+              <span class="tech-tag small">MySQL</span>
+            </div>
+          </div>
+          <h3>Library Management System</h3>
+          <p>Complete CRUD operations, JWT-style session authentication, and role-based access control (RBAC) for comprehensive library record management.</p>
+        </div>
+
+        <div class="project-card reveal" id="fallDetectionProject">
+          <div class="project-card-header">
+            <div class="project-card-icon">🛡️</div>
+            <div class="project-card-tags">
+              <span class="tech-tag small ml">IoT</span>
+              <span class="tech-tag small ml">Python</span>
+              <span class="tech-tag small ml">OpenCV</span>
+            </div>
+          </div>
+          <h3>Fall Detection System for Elders</h3>
+          <p>Real-time fall detection pipeline using sensor fusion and a Python-based alert notification system — designed to improve elder safety at home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 / Experience</span>
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal" id="cyberSecInternship">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Cyber Security Intern</h3>
+                <p class="timeline-org">Wahy Lab Solutions, Ernakulam</p>
+              </div>
+              <span class="timeline-badge">Internship</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Conducted vulnerability assessments on web applications, identifying and documenting critical security flaws.</li>
+              <li>Assisted in firewall configuration testing and network traffic analysis using industry tools.</li>
+              <li>Prepared detailed security audit reports and remediation documentation for client review.</li>
+              <li>Gained hands-on exposure to penetration testing methodologies and OWASP Top 10 vulnerabilities.</li>
+            </ul>
+            <div class="timeline-skills">
+              <span>NMAP</span><span>OWASP</span><span>Pen Testing</span><span>Security Auditing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 / Education</span>
+        <h2 class="section-title">Academic Background</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card reveal" id="mcaCard">
+          <div class="edu-year">2024 – 2026</div>
+          <div class="edu-degree">Master of Computer Applications</div>
+          <div class="edu-abbr">MCA</div>
+          <div class="edu-inst">Amal Jyothi College of Engineering (Autonomous)</div>
+          <div class="edu-cgpa">
+            <span class="cgpa-label">CGPA</span>
+            <span class="cgpa-val">8.14 / 10</span>
+          </div>
+          <div class="cgpa-bar"><div class="cgpa-fill" style="width: 81.4%"></div></div>
+        </div>
+        <div class="edu-card reveal" id="bcaCard">
+          <div class="edu-year">2020 – 2023</div>
+          <div class="edu-degree">Bachelor of Computer Applications</div>
+          <div class="edu-abbr">BCA</div>
+          <div class="edu-inst">St. George's College, Aruvithura</div>
+          <div class="edu-cgpa">
+            <span class="cgpa-label">CGPA</span>
+            <span class="cgpa-val">6.04 / 10</span>
+          </div>
+          <div class="cgpa-bar"><div class="cgpa-fill" style="width: 60.4%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06 / Achievements</span>
+        <h2 class="section-title">Certifications &amp; Highlights</h2>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card reveal" id="nptelCert">
+          <div class="cert-icon">📜</div>
+          <h3>NPTEL Certifications</h3>
+          <p>Completed NPTEL courses in <strong>Cloud Computing</strong>, <strong>Internet of Things</strong>, and <strong>Human Computer Interaction</strong>.</p>
+        </div>
+        <div class="cert-card reveal" id="cyberWorkshop">
+          <div class="cert-icon">🔐</div>
+          <h3>Cybersecurity Workshop</h3>
+          <p>Hands-on training with NMAP for network scanning — host discovery, port scanning, and interpreting scan results for security assessment.</p>
+        </div>
+        <div class="cert-card reveal" id="mlWorkshop">
+          <div class="cert-icon">🤖</div>
+          <h3>ML Workshop (Google Colab)</h3>
+          <p>Trained supervised models (Decision Trees, SVM, KNN) on real datasets — data preprocessing, feature engineering, model evaluation using Scikit-learn &amp; Matplotlib.</p>
+        </div>
+        <div class="cert-card reveal" id="wikiWorkshop">
+          <div class="cert-icon">🌐</div>
+          <h3>Wikimedia Workshop</h3>
+          <p>Led a group project building a movie website dynamically fetching film data via the Wikidata API — covered SPARQL querying, data parsing, and open knowledge contribution.</p>
+        </div>
+        <div class="cert-card reveal featured-cert" id="nasaHackathon">
+          <div class="cert-icon">🚀</div>
+          <h3>NASA Space Apps Hackathon</h3>
+          <p>Participated and developed a prototype solution addressing a NASA open-data challenge within a 48-hour sprint.</p>
+        </div>
+        <div class="cert-card reveal featured-cert" id="principalsHonour">
+          <div class="cert-icon">🏆</div>
+          <h3>Certificate of Merit</h3>
+          <p>Principal's Honours Award <strong>2024–25</strong> for academic excellence and outstanding contributions.</p>
+        </div>
+      </div>
+
+      <div class="strengths-section reveal">
+        <h3 class="strengths-title">Core Strengths</h3>
+        <div class="strengths-grid">
+          <div class="strength-item" id="problemSolving">
+            <span class="strength-icon">💡</span>
+            <span>Problem Solving</span>
+          </div>
+          <div class="strength-item" id="fullStackThinking">
+            <span class="strength-icon">🔄</span>
+            <span>Full Stack Thinking</span>
+          </div>
+          <div class="strength-item" id="teamCollab">
+            <span class="strength-icon">🤝</span>
+            <span>Team Collaboration</span>
+          </div>
+          <div class="strength-item" id="adaptability">
+            <span class="strength-icon">🌊</span>
+            <span>Adaptability</span>
+          </div>
+          <div class="strength-item" id="continuousLearning">
+            <span class="strength-icon">📈</span>
+            <span>Continuous Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">07 / Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-sub">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card reveal" id="emailContact">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
+          </div>
+          <h3>Email</h3>
+          <a href="mailto:nandhunandhuts@gmail.com">nandhunandhuts@gmail.com</a>
+        </div>
+        <div class="contact-card reveal" id="phoneContact">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.66A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006.36 6.36l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <h3>Phone</h3>
+          <a href="tel:+917306276438">+91 7306276438</a>
+        </div>
+        <div class="contact-card reveal" id="linkedinContact">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/nandhu-t-s" target="_blank" rel="noopener noreferrer">linkedin.com/in/nandhu-t-s</a>
+        </div>
+        <div class="contact-card reveal" id="locationContact">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Location</h3>
+          <span>Kottayam, Kerala, India</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">NTS<span class="logo-dot">.</span></div>
+        <p class="footer-text">Designed &amp; Built by <strong>Nandhu T S</strong></p>
+        <p class="footer-copy">© 2025 · Full Stack Developer &amp; ML Enthusiast · Kerala, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
