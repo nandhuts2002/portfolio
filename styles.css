@@ -850,7 +850,16 @@ img { max-width: 100%; display: block; }
   gap: 10px;
 }
 
-.project-card-icon { font-size: 2rem; }
+.project-card-icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+.project-card-icon svg {
+  width: 2.2rem;
+  height: 2.2rem;
+  color: var(--accent);
+}
 
 .project-card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
@@ -1060,7 +1069,20 @@ img { max-width: 100%; display: block; }
 
 .cert-card.featured-cert:hover { border-color: rgba(255,180,50,0.4); }
 
-.cert-icon { font-size: 2rem; margin-bottom: 14px; }
+.cert-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+}
+.cert-icon svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--accent);
+}
+.cert-card.featured-cert .cert-icon svg {
+  color: #ffc84a;
+}
 
 .cert-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; color: var(--text); }
 .cert-card p { font-size: 0.87rem; color: var(--text2); line-height: 1.7; }
@@ -1105,7 +1127,16 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
 }
 
-.strength-icon { font-size: 1.1rem; }
+.strength-icon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+.strength-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: var(--accent);
+}
 
 /* ---------- CONTACT ---------- */
 .contact-grid {

@@ -177,11 +177,11 @@ window.addEventListener('scroll', updateActiveNav, { passive: true });
 
 // ---------- Typewriter Effect for Hero ----------
 const titles = [
-  'Full Stack Developer 🚀',
-  'ML Enthusiast 🤖',
-  'Backend Architect ⚙️',
-  'React Developer ⚛️',
-  'Problem Solver 💡',
+  'Full Stack Developer',
+  'ML Enthusiast',
+  'Backend Architect',
+  'React Developer',
+  'Problem Solver',
 ];
 
 const heroTitle = $('.hero-title');
